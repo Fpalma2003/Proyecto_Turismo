@@ -1,0 +1,118 @@
+.navbar {
+    font-family: Arial;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: solid green;
+    list-style: none;
+    background: white;
+}
+
+.logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: green;
+}
+
+.heading {
+    position: static;
+    text-align: center;
+}
+
+.todo {
+    font-family: Arial;
+}
+
+.imagen {
+    height: 880px;
+    width: 100%;
+    zoom: 1; 
+}
+
+
+
+.act_image1{
+    position: static;
+    width: 350px;
+    height: 40vh;
+    float: flex;
+    alignment: center;
+    padding: left;
+}
+
+.act_image2{
+    position: static;
+    width: 350px;
+    height: 40vh;
+    float: flex;
+    alignment: center;
+    padding: left;
+}
+.act_image3{
+    position: static;
+    width: 350px;
+    height: 40vh;
+    float: flex;
+    alignment: center;
+    padding: left;
+}
+
+.surf{
+    border: solid lightgreen;
+    margin: 60px;
+    height: 70vh;
+    width: 350px;
+
+}
+
+.parque{
+    border: solid lightgreen;
+    margin: 60px;
+    height: 70vh;
+    width: 350px;
+}
+
+.tour{
+    border: solid lightgreen;
+    margin: 60px;
+    height: 70vh;
+    width: 350px;
+}
+
+.title{
+    text-align: center;
+    color: green;
+}
+
+.text{
+    text-align: center;
+
+}
+
+.contenido{
+    display: flex;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.boton{
+    background: lightgreen;
+    text-decoration: none;
+    border: solid #8ae58a;
+    font: blue;
+    margin: 140px;
+}

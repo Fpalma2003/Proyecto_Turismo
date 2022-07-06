@@ -1,0 +1,33 @@
+.navbar{
+    font-family: Arial;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    border: solid green;
+    list-style: none;
+    background: white;
+}
+
+.logo{
+    width:160px;
+    cursor:pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: green;
+}
+
+.title{
+    text-align: center;
+    color: green;
+}
+

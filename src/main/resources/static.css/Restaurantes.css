@@ -1,0 +1,124 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSyxstem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 4 jun. 2022, 17:07:13
+    Author     : Andra Mckenzie Araya
+*/
+*{
+    margin:0;
+    padding:0;
+}
+.navbar {
+    font-family: Arial;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: pink;
+    list-style: none;
+    background: white}
+.navbar ul li {
+    list-style: none;
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: green;
+}
+
+.heading {
+    position: static;
+    text-align: center;
+}
+
+.todo {
+    font-family: Arial;
+}
+
+.imagen {
+    height: 880px;
+    width: 100%;
+    zoom: 1; 
+}
+
+
+
+.rest_image1{
+    position: static;
+    width: 350px;
+    height: 40vh;
+    float: flex;
+    alignment: center;
+    padding: left;
+}
+
+.rest_image2{
+    position: static;
+    width: 350px;
+    height: 40vh;
+    float: flex;
+    alignment: center;
+    padding: left;
+}
+.rest_image3{
+    position: static;
+    width: 350px;
+    height: 40vh;
+    float: flex;
+    alignment: center;
+    padding: left;
+}
+
+.Alajuela{
+    border: solid pink;
+    margin: 60px;
+    height: 70vh;
+    width: 350px;
+
+}
+
+.Heredia{
+    border: solid pink;
+    margin: 60px;
+    height: 70vh;
+    width: 350px;
+}
+
+.San José{
+    border: solid pink;
+    margin: 60px;
+    height: 70vh;
+    width: 350px;
+}
+
+.title{
+    text-align: center;
+    color: green;
+}
+
+.text{
+    text-align: center;
+
+}
+
+.contenido{
+    display: flex;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.boton{
+    background: pink;
+    text-decoration: none;
+    border: solid #8ae58a;
+    font: blue;
+    margin: 140px;
+}
+

@@ -1,0 +1,85 @@
+.navbar{
+    font-family: Arial;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    border: solid green;
+    list-style: none;
+    background: white;
+}
+
+.logo{
+    width:160px;
+    cursor:pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: green;
+}
+
+.SJO{
+    height: 640px;
+    zoom: 1;
+    
+}
+
+.clearfix{
+    clear:both;
+}
+
+.imagen{
+    width: 300px;
+    margin: 56px;
+    
+}
+
+.marcas{
+    border: solid black;
+     width: 400px;
+    height: 380px;
+    display: flex;
+    
+}
+
+.aeroMex{
+    font-family: Arial;
+    border: solid #aee2b2;
+    height: 470px;
+    margin: 5px;
+}
+
+.airCanada{
+    font-family: Arial;
+     border: solid #aee2b2;
+    margin: 5px;
+    height: 470px;
+}
+
+.airFrance{
+    font-family: Arial;
+    border: solid #aee2b2;
+    margin: 5px;
+    height: 470px;
+}
+
+.boton{
+    background: lightgreen;
+    text-decoration: none;
+    border: solid #8ae58a;
+    font: blue;    
+    margin: 168px;
+    
+}
+
+.aeroText{
+    text-align: center;
+}
