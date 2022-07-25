@@ -1,0 +1,25 @@
+CREATE DATABASE PaginaTurismo;
+use PaginaTurismo;
+
+CREATE TABLE `restaurantes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `restaurantes` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+INSERT INTO `restaurantes` VALUES (1,'Ragu'),(2,'El Novillo Alegre'),(3,'Taller De Billy Sazón');
+
+CREATE TABLE `audiencia` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ubicacion` varchar(255) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `precios` int(55) NOT NULL,
+  `audiencia_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`,`audiencia_id`),
+  KEY `fk_audiencia_restaurantes_idx` (`audiencia_id`),
+  CONSTRAINT `fk_audiencia_restaurantes` FOREIGN KEY (`audiencia_id`) REFERENCES `restaurantes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ;
+
+INSERT INTO `audiencia` VALUES (1,'Alajuela',3,50000,1);
+INSERT INTO `audiencia` VALUES (2,'Heredia',4,70000,3);
+INSERT INTO `audiencia` VALUES (3,'San Jose',5,40000,2);
