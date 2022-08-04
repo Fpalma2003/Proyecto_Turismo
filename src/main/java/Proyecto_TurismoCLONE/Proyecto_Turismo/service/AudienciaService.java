@@ -8,11 +8,13 @@ import Proyecto_TurismoCLONE.Proyecto_Turismo.entity.Audiencia;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import Proyecto_TurismoCLONE.Proyecto_Turismo.repository.AudienciaRepository;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author fabri
  */
+@Service
 public class AudienciaService implements IAudienciaService{
     
     @Autowired

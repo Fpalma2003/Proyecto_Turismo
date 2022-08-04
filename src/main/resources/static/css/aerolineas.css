@@ -1,18 +1,23 @@
+*{
+    font-family: Arial;
+}
+
 .navbar{
     font-family: Arial;
     position: fixed;
-    height: 70px;
-    width: 100%;
+    height: 80px;
+    width: 100vw;
     display: flex;
     align-items: center;
-    border: solid green;
     list-style: none;
     background: white;
 }
 
 .logo{
-    width:160px;
+    width:148px;
+    height:88px;
     cursor:pointer;
+    margin: -3px;
 }
 
 .navbar ul li{
@@ -24,11 +29,12 @@
 .navbar ul li a{
     text-decoration: none;
     color: green;
+    margin:10px;
 }
 
 .SJO{
-    height: 640px;
-    zoom: 1;
+    width: 99vw;
+    zoom: -5;
 
 }
 
@@ -51,29 +57,27 @@
 
 .aeroMex{
     font-family: Arial;
-    border: solid #aee2b2;
+    border: outset #aee2b2;
     height: 470px;
     margin: 5px;
 }
 
 .airCanada{
     font-family: Arial;
-    border: solid #aee2b2;
+    border: outset #aee2b2;
     margin: 5px;
     height: 470px;
 }
 
 .airFrance{
     font-family: Arial;
-    border: solid #aee2b2;
+    border: outset #aee2b2;
     margin: 5px;
     height: 470px;
 }
 
 .boton{
-    background: lightgreen;
     text-decoration: none;
-    border: solid #8ae58a;
     font: blue;
     margin: 168px;
 
@@ -81,4 +85,10 @@
 
 .aeroText{
     text-align: center;
+}
+
+.title{
+    text-align: center;
+    font-size: 50px;
+    color: green;
 }

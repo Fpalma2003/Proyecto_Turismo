@@ -13,21 +13,44 @@ and open the template in the editor.
     </head>
     <body>
         <div class='todo'>
-            <div class="navbar">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <li><img src="images/logo1.png" class='logo' alt="Es mi logo"/></li>
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarNav">
 
-                <img src="images/logo.png" class='logo' alt="Es mi logo"/>
+                        <ul class="navbar-nav">
 
-                <ul>
-                    <li><a href="home.html">Home</a>    </li>
-                    <li><a href="index.html">Index</a>  </li>
-                    <li><a href="actividades.html">Otras Actividades</a>  </li>
-                    <li><a href="aerolineas.html">Aerolineas</a>  </li>
-                </ul>
-
-            </div>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="AgenciasLocales.html">Agencias Locales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Alojamiento.html">Alojamiento</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="AlquilerAutos.html">Alquiler Autos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Restaurantes.html">Restaurantes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="actividades.html">Actividades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aerolineas.html">Aerolineas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="consejos.html">Consejos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <!-- Here ends NAVBAR -->
 
-            <img src="https://conozcasucanton.com/wp-content/uploads/sites/11/2016/06/turubari.jpg" class="imagen" alt="imagen"/>
+            <img src="images/actividadesFondo.jpg" class="imagen" alt="imagen"/>
 
             <div class="clearfix"></div>
 
@@ -37,37 +60,46 @@ and open the template in the editor.
                     <h2 class='heading'>¿Qué más hacer en Costa Rica?</h2>
                 </div>
 
-                <div class='contenido'>
 
-                    <div class="surf">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/49/1b/0a/daily-surf-lessons-at.jpg?w=1200&h=-1&s=1" class="act_image1" alt="alt"/>
-                        <h3 class='title'>Lecciones de Surf en Playa Tamarindo</h3>
-                        <p class='text'>¡Aprende a surfear con la escuela #1 de Tamarindo desde 1989!</p>
-                        <a class="boton" href="http://www.viator.com/tours/Tamarindo/Surf-Lessons-in-Tamarindo/d24763-8153P1?eap=visitacity-1020772933-14055&aid=vba14055en"> Ver más </a>
+                <div class="cartas">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/surf.jpg" class="card-img-top" alt="alt"/>
+                        <div class="card-body">
+                            <h5 class="card-title">Lecciones de Surf en Playa Tamarindo</h5>
+                            <p class="card-text">¡Aprende a surfear con la escuela #1 de Tamarindo desde 1989!</p>
+                            <a class="btn-card" href="http://www.viator.com/tours/Tamarindo/Surf-Lessons-in-Tamarindo/d24763-8153P1?eap=visitacity-1020772933-14055&aid=vba14055en"> Ir a Sitio </a>
+                        </div>
                     </div>
 
-                    <div class="clearfix"></div>
-
-                    <div class="parque">
-                        <img src="https://www.mensjournal.com/wp-content/uploads/2021/12/waterfall.jpg?quality=47&strip=all" class="act_image2" alt="alt"/>
-                        <h3 class='title'>Parque Nacional Manuel Antonio</h3>
-                        <p class='text'>En Grupos de 6 a 8 personas, disfruten de una caminata natural por el parque nacional Manuel Antonio</p>
-                        <a class="boton" href="https://www.viator.com/Quepos/d4507-ttd/p-70025P2?eap=visitacity-1020772933-14055&aid=vba14055en">Ver más</a>
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/catarata.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque Nacional Manuel Antonio</h5>
+                            <p class="card-text">En Grupos de 6 a 8 personas, disfruten de una caminata natural por el parque nacional Manuel Antonio</p>
+                            <a class="btn-card" href="https://www.viator.com/Quepos/d4507-ttd/p-70025P2?eap=visitacity-1020772933-14055&aid=vba14055en"> Ir a Sitio </a>
+                        </div>
                     </div>
 
-                    <div class="clearfix"></div>
+                    <div class="clearfix"></div><!-- comment -->
 
-                    <div class="tour">
-                        <img src="https://www.bautrip.com/images/what-to-visit/tortuguero-costa-rica.jpg" class="act_image3" alt="alt"/>
-                        <h3 class='title'>Tour Isla Tortuguero</h3>
-                        <p class='text'>Tortugas :D</p>
-                        <a class='boton' href="https://www.viator.com/Puntarenas/d4506-ttd/p-76433P1?eap=visitacity-1020772933-14055&aid=vba14055en">Ver más</a>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/tortuga.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tour Isla Tortuguero</h5>
+                            <p class="card-text">Tortugas :D</p>
+                            <a class="btn-card" href="https://www.viator.com/Puntarenas/d4506-ttd/p-76433P1?eap=visitacity-1020772933-14055&aid=vba14055en"> Ir a Sitio </a>
+                        </div>
                     </div>
 
-                    <div class="clearfix"></div>
+                </div>
 
-                </div> <!-- Fin Contenido -->
-            </div>
+
+                <div class="clearfix"></div>
+
+            </div> <!-- Fin Contenido -->
         </div>
+
     </body>
 </html>
