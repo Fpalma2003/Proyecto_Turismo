@@ -1,0 +1,47 @@
+.navbar{
+    font-family: Arial;
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background: white;
+}
+
+.logo{
+    width:148px;
+    height:88px;
+    cursor:pointer;
+    margin: -3px;
+}
+
+.navbar ul li{
+    list-style: none;
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: green;
+    margin:10px;
+}
+
+.clearfix{
+    clear:both;
+}
+
+.image{
+    width: 100%;
+    height: 45vw;
+}
+
+.title{
+    text-align: center;
+    color: green;
+}
+.list{
+    text-align: none;
+    color: darkgreen;
+}

@@ -1,0 +1,67 @@
+CREATE DATABASE PaginaTurismo;
+use PaginaTurismo;
+
+CREATE TABLE `restaurantes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `restaurantes` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+INSERT INTO `restaurantes` VALUES (1,'Ragu'),(2,'El Novillo Alegre'),(3,'Taller De Billy Sazón');
+
+CREATE TABLE `audiencia` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ubicacion` varchar(255) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `precios` int(55) NOT NULL,
+  `audiencia_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`,`audiencia_id`),
+  KEY `fk_audiencia_restaurantes_idx` (`audiencia_id`),
+  CONSTRAINT `fk_audiencia_restaurantes` FOREIGN KEY (`audiencia_id`) REFERENCES `restaurantes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION);
+
+CREATE TABLE `agenciaslocales` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `agencias` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+INSERT INTO `agenciaslocales` VALUES (1,'3 Monkies Tours'),(2,'Adrenalina Rafting'),(3,'Alova Tours');
+
+CREATE TABLE `agenciasau` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ubicacion` varchar(255) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `agenciasau_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`,`agenciasau_id`),
+  KEY `fk_agenciasau_agenciaslocales_idx` (`agenciasau_id`),
+  CONSTRAINT `fk_agenciasau_agenciaslocales` FOREIGN KEY (`agenciasau_id`) REFERENCES `agenciaslocales` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION);
+
+CREATE TABLE `actividades` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `actividades` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+INSERT INTO `actividades` VALUES (1,'Lecciones de Surf'),(2,'Parque Nacional Manuel Antonio'),(3,'Tour');
+
+CREATE TABLE `actividadesau` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ubicacion` varchar(255) NOT NULL,
+  `nivel de intensidad` int(11) NOT NULL,
+  `actividadesau_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`,`actividadesau_id`),
+  KEY `fk_actividadesau_actividades_idx` (`actividadesau_id`),
+  CONSTRAINT `fk_actividadesau_actividades` FOREIGN KEY (`actividadesau_id`) REFERENCES `actividades` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION);
+  
+INSERT INTO `audiencia` VALUES (1,'Alajuela',3,50000,1);
+INSERT INTO `audiencia` VALUES (2,'Heredia',4,70000,3);
+INSERT INTO `audiencia` VALUES (3,'San Jose',5,40000,2);
+
+INSERT INTO `agenciasau` VALUES (1,'Guanacaste',5,1);
+INSERT INTO `agenciasau` VALUES (2,'Turrrialba',3,3);
+INSERT INTO `agenciasau` VALUES (3,'San Jose',2,2);
+
+INSERT INTO `actividadesau` VALUES (1,'Playa Tamarindo',5,1);
+INSERT INTO `actividadesau` VALUES (2,'Manuel Antonio',4,3);
+INSERT INTO `actividadesau` VALUES (3,'Isla Tortuguero',2,2);
+
