@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="card-header bg-black text-white"> </div>
+            <div class="card-body">
+
+                <!-------------------Esto es un Formulario--------------- -->
+
+
+                        <th:block th:object="actividad : ${Actividades}"> <!-- Rellenado Tabla -->
+                            <div class="mb-3"> <!-- Nombre Actividad -->
+                                <label for="exampleFormControlInput1" class="form-label"></label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"  id="" placeholder=""th:text="${actividad.getActividades}">
+                            </div>
+                        </th:block>
+                        
+
+            </div>
+        </div>
+
+    </body>
+</html>

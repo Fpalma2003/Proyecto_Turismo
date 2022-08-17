@@ -1,4 +1,4 @@
-.navbar{
+/*.navbar{
     font-family: Arial;
     position: relative;
     height: 80px;
@@ -8,7 +8,7 @@
     border: solid green;
     list-style: none;
     background: white;
-}
+}*/
 
 .logo{
     width:148px;
@@ -17,7 +17,7 @@
     margin: -3px;
 }
 
-.navbar ul li{
+/*.navbar ul li{
     list-style: none;
     float: left;
     margin: 10px;
@@ -27,7 +27,7 @@
     text-decoration: none;
     color: green;
     margin:10px;
-}
+}*/
 
 .title{
     margin:50px;
