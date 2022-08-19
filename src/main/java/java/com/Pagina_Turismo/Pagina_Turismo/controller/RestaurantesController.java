@@ -4,10 +4,7 @@
  */
 package com.Pagina_Turismo.Pagina_Turismo.controller;
 
-
-import com.Pagina_Turismo.Pagina_Turismo.entity.Audiencia;
 import com.Pagina_Turismo.Pagina_Turismo.entity.Restaurante;
-import com.Pagina_Turismo.Pagina_Turismo.service.IAudienciaService;
 import com.Pagina_Turismo.Pagina_Turismo.service.IRestauranteService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,17 +23,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class RestaurantesController {
 
     @Autowired
-    private IAudienciaService audienciaService;
-
-    @Autowired
     private IRestauranteService restauranteService;
 
     @GetMapping("/Restaurantes")
     public String indexRestaurantes(Model model) {
-        List<Audiencia> listaRest = audienciaService.getAllRestaurantes();
+        List<Restaurante> listaRest = restauranteService.getAllRestaurantes();
         model.addAttribute("titulo", "Tabla Restaurantes");/*donde en el html encuentre "titulo" lo va a sustituir por 
         "Tabla Persona" */
-        model.addAttribute("personas", listaRest);/*donde en el html encuentre "personas" lo va a sustituir por 
+        model.addAttribute("Restaurantes", listaRest);/*donde en el html encuentre "personas" lo va a sustituir por 
         listaPersona (line 26) */
         return "restaurantes";//devolvera html persona
     }
@@ -44,34 +38,29 @@ public class RestaurantesController {
     //Metodo que crear una nueva persona
     @GetMapping("/restauranteN")//cuando se usa ese url pasa lo de abajo
     public String crearRestaurante(Model model) {//model permite pasar informacion a un html
-        List<Restaurante> listaRest = restauranteService.listRest();//pasamos toda la lista pais al html
-        model.addAttribute("Restaurantes", new Audiencia());//creamos un objeto nuevo tipo persona para poder crear la fila
-        model.addAttribute("restaurante", listaRest);/*donde en el html encuentre "paises" lo va a sustituir por 
-        listaPaises (line 41) esto para poder hacer el dropdowm*/
-        return "crear";//devolvera html crear
+        model.addAttribute("Restaurantes", new Restaurante());//creamos un objeto nuevo tipo persona para poder crear la fila
+        return "crearRestaurante";//devolvera html crear
     }
 
     //Metodo que guardar la nueva persona y su info
-    @PostMapping("/save")//cuando se usa ese url pasa lo de abajo
-    public String guardarRestaurante(@ModelAttribute Audiencia restaurante) {//enviar informacion a mi metodo 
-        audienciaService.saveRestaurantes(restaurante);//asi lo guardo en la base de datos
+    @PostMapping("/saveRestaurante")//cuando se usa ese url pasa lo de abajo
+    public String guardarRestaurante(@ModelAttribute Restaurante restaurante) {//enviar informacion a mi metodo 
+        restauranteService.saveRestaurantes(restaurante);//asi lo guardo en la base de datos
         return "redirect:/restaurante";
     }
 
     //Metodo que edita
     @GetMapping("/editRestaurante/{id}")//cuando se usa ese url pasa lo de abajo y le estoy especificando que quiero edutar por el id
     public String editarRestaurante(@PathVariable("id") Long idRestaurante, Model model) {//enviar informacion a mi metodo 
-        Audiencia restaurante = audienciaService.getRestaurantesById(idRestaurante);
-        List<Restaurante> listaRest = restauranteService.listRest();
+        Restaurante restaurante = restauranteService.getRestaurantesById(idRestaurante);
         model.addAttribute("restaurante", restaurante);//ya no creamos el objeto por que el objeto lo creamos en la linea 64
-        model.addAttribute("restaurante", listaRest);
         return "crear";//redirige a persona
     }
 
     //Metodo que elimina
     @GetMapping("/delete/{id}")//cuando se usa ese url pasa lo de abajo y le estoy especificando que quiero edutar por el id
     public String eliminarRestaurante(@PathVariable("id") Long idRestaurantes) {//enviar informacion a mi metodo 
-        audienciaService.delete(idRestaurantes);
+        restauranteService.deleteRestaurantes(idRestaurantes);
         return "redirect:/restaurantes";//redirige a persona
     }
 }

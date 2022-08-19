@@ -1,15 +1,18 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package com.Pagina_Turismo.Pagina_Turismo.repository;
 
-import com.Pagina_Turismo.Pagina_Turismo.entity.Restaurante;
+import com.Pagina_Turismo.Pagina_Turismo.entity.AgenciasReserva;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+/**
+ *
+ * @author ala11
+ */
 @Repository
-public interface RestauranteRepository extends CrudRepository<Restaurante, Long> {
-
-    Restaurante findByNombreRest(String nombreRest);
+public interface AgenciasReservaRepository extends CrudRepository<AgenciasReserva, Long> {
+    
 }

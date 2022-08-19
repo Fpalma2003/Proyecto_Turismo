@@ -17,12 +17,12 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "agenciaslocales")
-public class AgenciasLocales implements Serializable  {
+public class AgenciasLocales implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private long id;
-    private String nombreAgencias;
+    private String nomAgenciaLocal;
 
     public long getId() {
         return id;
@@ -32,11 +32,11 @@ public class AgenciasLocales implements Serializable  {
         this.id = id;
     }
 
-    public String getNombreAgencias() {
-        return nombreAgencias;
+    public String getNomAgenciaLocal() {
+        return nomAgenciaLocal;
     }
 
-    public void setNombreAgencias(String nombreAgencias) {
-        this.nombreAgencias = nombreAgencias;
+    public void setNomAgenciaLocal(String nomAgenciaLocal) {
+        this.nomAgenciaLocal = nomAgenciaLocal;
     }
 }

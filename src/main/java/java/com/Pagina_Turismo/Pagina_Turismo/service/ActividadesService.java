@@ -37,8 +37,8 @@ public class ActividadesService implements IActividadesService {
     }
 
     @Override
-    public Actividades findByNombre(String nombre) {
-        return actividadesRepository.findByNombre(nombre);
+    public Actividades findByNomActividades(String nomActividades) {
+        return actividadesRepository.findByNomActividades(nomActividades);
     }
 
 }

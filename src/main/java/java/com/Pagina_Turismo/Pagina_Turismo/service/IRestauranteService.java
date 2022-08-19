@@ -9,5 +9,14 @@ import java.util.List;
 
 public interface IRestauranteService {
 
-    public List<Restaurante> listRest();
+    public List<Restaurante> getAllRestaurantes();
+
+    public Restaurante getRestaurantesById(long id);
+
+    public Restaurante saveRestaurantes(Restaurante restaurante);
+
+    public void deleteRestaurantes(long id);
+
+    public Restaurante findByNombreRest(String nombreRest);
+
 }

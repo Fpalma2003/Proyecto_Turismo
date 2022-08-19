@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ActividadesRepository extends CrudRepository<Actividades, Long> {
 
-    Actividades findByNombre(String nombre);
+    Actividades findByNomActividades(String nomActividades);
 
 }

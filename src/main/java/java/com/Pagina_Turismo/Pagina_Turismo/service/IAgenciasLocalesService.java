@@ -13,5 +13,13 @@ import java.util.List;
  */
 public interface IAgenciasLocalesService {
 
-    public List<AgenciasLocales> listAgencias();
+    public List<AgenciasLocales> getAllAgenciasLocales();
+
+    public AgenciasLocales getAgenciasLocalesById(long id);
+
+    public AgenciasLocales saveAgenciasLocales(AgenciasLocales agenciaslocales);
+
+    public void deleteAgenciasLocales(long id);
+
+    public AgenciasLocales findByNomAgenciaLocal(String nomAgencialocal);
 }

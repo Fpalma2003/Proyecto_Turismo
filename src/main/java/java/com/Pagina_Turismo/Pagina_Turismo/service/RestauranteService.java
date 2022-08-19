@@ -1,6 +1,5 @@
 package com.Pagina_Turismo.Pagina_Turismo.service;
 
-
 import com.Pagina_Turismo.Pagina_Turismo.entity.Restaurante;
 import com.Pagina_Turismo.Pagina_Turismo.repository.RestauranteRepository;
 import java.util.List;
@@ -18,8 +17,28 @@ public class RestauranteService implements IRestauranteService {
     private RestauranteRepository restauranteRepository;
 
     @Override
-    public List<Restaurante> listRest() {
+    public List<Restaurante> getAllRestaurantes() {
         return (List<Restaurante>) restauranteRepository.findAll();
+    }
+
+    @Override
+    public Restaurante getRestaurantesById(long id) {
+        return restauranteRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Restaurante saveRestaurantes(Restaurante restaurante) {
+        return restauranteRepository.save(restaurante);
+    }
+
+    @Override
+    public void deleteRestaurantes(long id) {
+        restauranteRepository.deleteById(id);
+    }
+
+    @Override
+    public Restaurante findByNombreRest(String nombreRest) {
+        return restauranteRepository.findByNombreRest(nombreRest);
     }
 
 }

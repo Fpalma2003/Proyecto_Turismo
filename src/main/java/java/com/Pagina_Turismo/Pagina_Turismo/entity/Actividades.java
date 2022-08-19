@@ -22,7 +22,7 @@ public class Actividades implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String nombre;
+    private String nomActividades;
 
     public long getId() {
         return id;
@@ -32,12 +32,12 @@ public class Actividades implements Serializable {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNomActividades() {
+        return nomActividades;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNomActividades(String nomActividades) {
+        this.nomActividades = nomActividades;
     }
 
 }

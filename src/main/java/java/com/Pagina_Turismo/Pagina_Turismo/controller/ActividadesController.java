@@ -1,7 +1,6 @@
 package com.Pagina_Turismo.Pagina_Turismo.controller;
 
 import com.Pagina_Turismo.Pagina_Turismo.entity.Actividades;
-import com.Pagina_Turismo.Pagina_Turismo.service.IActividadesAuService;
 import com.Pagina_Turismo.Pagina_Turismo.service.IActividadesService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ActividadesController {
-
-    @Autowired
-    private IActividadesAuService actividadesAuService;
 
     @Autowired
     private IActividadesService actividadesService;
@@ -45,7 +41,6 @@ public class ActividadesController {
     //Metodo que guardar la nueva actividad y su info
     @PostMapping("/saveActividad")//cuando se usa ese url pasa lo de abajo
     public String guardarActividad(@ModelAttribute Actividades Actividades) {//enviar informacion a mi metodo 
-        System.out.println(Actividades);
         actividadesService.saveActividades(Actividades);//asi lo guardo en la base de datos
         return "redirect:/Actividades";
     }
@@ -54,9 +49,7 @@ public class ActividadesController {
     @GetMapping("/editActividad/{id}")//cuando se usa ese url pasa lo de abajo y le estoy especificando que quiero edutar por el id
     public String editarActividad(@PathVariable("id") Long idActividad, Model model) {//enviar informacion a mi metodo 
         Actividades actividadau = actividadesService.getActividadesById(idActividad);
-//        List<ActividadesAu> listaAct = actividadesAuService.listActividadesAu();
         model.addAttribute("actividad", actividadau);//ya no creamos el objeto por que el objeto lo creamos
-//        model.addAttribute("actividad", listaAct);
         return "crearActividad";//redirige a crearActividad
     }
 

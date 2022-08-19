@@ -17,6 +17,6 @@ public interface IActividadesService {
 
     public void deleteActividad(long id);
 
-    public Actividades findByNombre(String nombre);
+    public Actividades findByNomActividades(String nomActividades);
 
 }
