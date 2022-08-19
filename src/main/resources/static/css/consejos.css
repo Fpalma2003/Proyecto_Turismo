@@ -1,28 +1,28 @@
 .navbar{
     font-family: Arial;
     position: fixed;
-    height: 80px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    background: white;
+    height: 100px;
+    width: 99vw;
+    margin-top: 0vw;
+    margin-left: -0vw;
 }
 
 .logo{
-    width:148px;
-    height:88px;
+    width:12vw;
+    height:7vw;
     cursor:pointer;
-    margin: -3px;
+    margin: 1vw;
+    margin-top: -1vw;
 }
 
 .navbar ul li{
     list-style: none;
     float: left;
-    margin: 10px;
+    margin: 5px;
 }
 
 .navbar ul li a{
+    font-size: 106%;
     text-decoration: none;
     color: green;
     margin:10px;
@@ -41,7 +41,7 @@
     text-align: center;
     color: green;
 }
-.list{
-    text-align: none;
-    color: darkgreen;
+
+.list-group-item{
+
 }

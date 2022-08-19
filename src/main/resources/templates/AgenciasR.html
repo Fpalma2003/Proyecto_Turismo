@@ -12,7 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div><!DOCTYPE html>
             <html xmlns:th="http://www.thymeleaf.org">
                 <head th:replace="plantilla/templates::head"></head>
-                <title>Reservar Actividad</title>
+                <title>Reservar Agencia Local</title>
                 </head>
                 <body>
                     <header th:replace="plantilla/templates::header"></header>
@@ -22,7 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
 
-                    <button type="button" class="btn btn-outline-success"><a href="/nuevaReservacionActividades" type="">Reservar</a></button>
+                    <button type="button" class="btn btn-outline-success"><a href="/nuevaReservacionAgenciaLocal" type="">Reservar</a></button>
 
                     <br>
 
@@ -38,18 +38,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             </tr>
                         </thead>
                         <tbody>
-                        <th:block th:each="actividad : ${ActividadesReserva}"> <!-- Rellenado Tabla -->
+                        <th:block th:each="agencia : ${AgenciasLocales}"> <!-- Rellenado Tabla -->
                             <tr> 
-                                <td th:text="${actividad.getActividadesr}"></td> <!-- Nombres Actividades -->
+                                <td th:text="${agencia.getAgenciar}"></td> <!-- Nombres Actividades -->
 
-                                <td th:text="${actividad.getFecha_actividades}"></td> <!-- Fecha Reservacion Actividades -->
+                                <td th:text="${agencia.getFecha_agencia}"></td> <!-- Fecha Reservacion Actividades -->
 
-                                <td th:text="${actividad.getHora_actividades}"></td> <!-- Hora Reservacion Actividades -->
+                                <td th:text="${agencia.getHora_agencia}"></td> <!-- Hora Reservacion Actividades -->
 
-                                <td th:text="${actividad.getCantidad_personas_actividades}"></td> <!-- Cantidad Personas Reservacion Actividades -->
+                                <td th:text="${agencia.getCantidad_personas_agencia}"></td> <!-- Cantidad Personas Reservacion Actividades -->
                                 <td>
-                                    <a th:href="@{/nuevaReservacionActividad}">Editar</a> <!-- Opcion Editar -->
-                                    <a th:href="@{/cancelarReservacionActividad/{id}(id=${actividad.getId})}">Cancelar</a> <!-- Opcion Eliminar -->
+                                    <a th:href="@{/editReservaAgencia/{id}(id=${agencia.getId})}">Editar</a> <!-- Opcion Editar -->
+                                    <a th:href="@{/cancelarReservacionAgencia/{id}(id=${agencia.getId})}">Cancelar</a> <!-- Opcion Eliminar -->
                                 </td>
                             </tr>
                         </th:block>

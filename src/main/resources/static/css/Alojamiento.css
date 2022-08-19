@@ -1,11 +1,3 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : Jun 7, 2022, 9:49:11 PM
-    Author     : fabri
-*/
 *{
     margin:0;
     padding:0;
@@ -24,29 +16,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 .navbar{
     font-family: Arial;
+    position: relative;
+    height: 100px;
+    width: 99vw;
+    margin-left: -10vw;
     position: fixed;
-    height: 80px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    background: white;
+    z-index: 999;
 }
 
 .logo{
-    width:148px;
-    height:88px;
+    width:12vw;
+    height:7vw;
     cursor:pointer;
-    margin: -3px;
+    margin: 1vw;
+    margin-top: -1vw;
 }
 
 .navbar ul li{
     list-style: none;
     float: left;
-    margin: 10px;
+    margin: 5px;
 }
 
 .navbar ul li a{
+    font-size: 106%;
     text-decoration: none;
     color: green;
     margin:10px;
@@ -58,27 +51,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     margin-top:24px;
     margin-bottom:15px;
     color:black;
-}
-
-.content p {
-    font-size:20px;
-    color:black;
-}
-
-.feature-img{
-    height:50%;
-    position:absolute;
-    bottom:50px;
-    right:1px;
-    left: 50px;
-}
-
-.feature-img2{
-    height:50%;
-    position:absolute;
-    bottom:50px;
-    right:30px;
-
 }
 
 .card-img{
@@ -110,6 +82,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 .background{
     width: 99vw;
-    margin: -4.2vw;
+    margin-top: 5vw;
+    margin-left: -10vw;
 }
 
+
+.cartas{
+    position: static;
+    margin-left: 4vw;
+}
+
+.heading{
+    margin:50px;
+    text-align: center;
+    color: green;
+}

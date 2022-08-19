@@ -1,41 +1,38 @@
 .navbar{
     font-family: Arial;
+    position: relative;
+    height: 100px;
+    width: 99vw;
+    margin-left: -0vw;
     position: fixed;
-    height: 80px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    background: white;
+    z-index: 999;
 }
 
 .logo{
-    width:148px;
-    height:88px;
+    width:12vw;
+    height:7vw;
     cursor:pointer;
-    margin: -3px;
+    margin: 1vw;
+    margin-top: -1vw;
 }
 
 .navbar ul li{
     list-style: none;
     float: left;
-    margin: 10px;
+    margin: 5px;
 }
 
 .navbar ul li a{
+    font-size: 106%;
     text-decoration: none;
     color: green;
     margin:10px;
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: green;
-}
-
 .heading {
     position: static;
     text-align: center;
+    color: green;
 }
 
 .todo {
@@ -116,25 +113,10 @@
     clear: both;
 }
 
-.boton{
-    background: lightgreen;
-    text-decoration: none;
-    border: solid #8ae58a;
-    font: blue;
-    margin: 140px;
-}
-
 .card{
-    border: inset lightgreen;
-    margin:50px;
+    margin: 6.5vw;
 
 }
-
-.card-body{
-    border-top: solid lightgray;
-    margin-top:10px;
-}
-
 .card-title{
     color: green;
     text-align: center;
@@ -146,17 +128,11 @@
     font-size: 15px;
 }
 
-.card-img-top{
-    position: static;
-    width: 280px;
-    height: 200px;
-    float: flex;
-    alignment: center;
-    padding: left;
-    margin-top:10px;
+.cartas{
+    width: 1000vw;
+    display: flex;
 }
 
-.cartas{
-    width: 50vw;
-    display: flex;
+.btn-primary{
+    margin-left: 5vw;
 }
