@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 container justify-content-center card">
+                    <h1 class="text-center">Reservar Auto</h1>
+                    <div class="card-body">
+                        <form th:action="@{/saveAutos}" th:object="${AlquilerAutos}" method="POST">
+                            <input type="hidden" th:field="*{id}">{cke_protected_5}
+                            <div class="form-group">
+                                <label th:text="#{auto.nombre}"> </label> {cke_protected_6}
+                                <input type="text"  data-cke-saved-name="nombre" name="nombre" th:field="*{nombre_autos}" class="form-control" placeholder="Digite el carro a reservar" required>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-success" value="Guardar" th:text="#{tabla.guardar}"></button>
+                            </div>
+                        </form>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer th:replace="plantilla/templates::footer"></footer>
+</html>

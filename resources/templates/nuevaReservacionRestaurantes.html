@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+
+        <title>Reservando Restaurante...</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 container justify-content-center card">
+                    <br>
+                    <h1 class="text-center">Reservar Restaurante</h1>
+
+                    <div class="card-body">
+                        <form th:action="@{/saveReservacionRestaurantes}" th:object="${ReservacionRestaurante}" method="POST"> <!-- th:object = objeto que se define en /nuevaReservacionActividada (line 38) -->
+
+
+                            <input type="hidden" th:field="*{id}">
+
+                            <br>
+                            <div class="form-group mb-3 row"> <!-- DROPDOWN -->
+                                <label class="form-control-sm col-form-label col-md-2" for="dropdownRest" th:text="#{restaurante.nombre}"></label>
+                                <div class="col-sm-10">
+                                    <select th:field="*{restaurantesr}" class="form-control form-control-sm col-md-6" id="restaurantesr" aria-describedby="emailHelp">  <!-- Campo a editar -->
+                                        <option th:each="x:${dropdownRest}" 
+                                                th:value="${x.nombre_rest}" 
+                                                th:text="${x.nombre_rest}"/>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label th:text="#{tabla.cliente}"></label> <!-- Titulo Text Field -->
+                                <input type="text" name="cliente" th:field="*{cliente_restaurantes}" class="form-control" placeholder="Ingrese el nombre de usuario" required> <!-- TextField -->
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label th:text="#{tabla.fecha}"></label> <!-- Titulo Text Field -->
+                                <input type="text" name="fecha" th:field="*{fecha_restaurantes}" class="form-control" placeholder="yyyy-dd-mm" required> <!-- TextField -->
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label th:text="#{tabla.hora}"></label> <!-- Titulo Text Field -->
+                                <input type="text" name="hora" th:field="*{hora_restaurantes}" class="form-control" placeholder="hh-mm" required> <!-- TextField -->
+                            </div>
+                            <div class="form-group">
+                                <label th:text="#{tabla.cant}"></label> <!-- Titulo Text Field -->
+                                <input type="text" name="cantidad" th:field="*{cantidad_personas_restaurantes}" class="form-control" placeholder="Cantidad de personas" required> <!-- TextField -->
+
+                            </div>
+                    </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-success" value="Guardar" th:text="#{tabla.guardar}"></button>
+                        <button type="submit" class="btn btn-danger" ><a href="/reservacionRestaurantes" th:text="#{tabla.volver}"></a></button>
+                    </div>
+
+                    <br>
+
+
+                    </form>         <!-------------------Esto es un Formulario--------------- -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer th:replace="plantilla/templates::footer"></footer>
+</html>

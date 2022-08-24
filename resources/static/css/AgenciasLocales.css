@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial;
+}
+
+.navbar{
+    font-family: Arial;
+    position: fixed;
+    height: 100px;
+    width: 99vw;
+    margin-top: 0vw;
+    margin-left: -6vw;
+}
+
+.logo{
+    width:12vw;
+    height:7vw;
+    cursor:pointer;
+    margin: 1vw;
+    margin-top: -1vw;
+}
+
+.navbar ul li{
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+
+.navbar ul li a{
+    font-size: 106%;
+    text-decoration: none;
+    color: green;
+    margin:10px;
+}
+
+
+.heading {
+    position: static;
+    margin:50px;
+    color: green;
+    text-align: center;
+}
+
+
+.cartas{
+
+    margin-left: -4vw;
+    width: 100vw;
+    display: flex;
+}
+
+.card{
+    margin: 8vw;
+    height: 30vw;
+}
+
+.card-title{
+    color: green;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 4vw;
+    width: 120px;
+}
+
+.card-text{
+    text-align: center;
+    font-size: 13px;
+    margin-left: 4vw;
+    width: 120px;
+}
+
+.card-body{
+    width: 12vw;
+    height: 12vw;
+}
+
+.imagen {
+    height: 880px;
+    width: 100%;
+    zoom: 1;
+}
+
+.fondo{
+    width: 110vw;
+    height: 50vw;
+    margin-left: -14vw;
+}
+
+.title{
+    text-align: center;
+    color: green;
+}
+
+.text{
+    text-align: center;
+
+}
+
+.contenido{
+    display: flex;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.btn-primary{
+    text-decoration: none;
+    text-align: center;
+    margin-left: 5vw;
+    margin-top: -1vw;
+
+}
+
+.card-img-topR{
+    height: 10vw;
+
+}
+

@@ -1,0 +1,101 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <link href="C:\Users\ala11\OneDrive\Escritorio\U shit\bootstrap-5.0.2-dist\css" media="all" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css\AgenciasLocales.css"/>
+    </head>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg bg-light">  <!-- COMIENZO NAVBAR -->
+            <li><img src="images/logo1.png" class='logo' alt="Es mi logo"/></li>
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" th:text="#{navbar.home}" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AgenciasLocales.html">Agencias Locales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Alojamiento.html">Alojamiento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AlquilerAutos.html">Alquiler Autos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Restaurantes.html">Restaurantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="actividades.html">Actividades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aerolineas.html">Aerolineas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consejos.html">Consejos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="perfil.html">Perfil</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav> <!-- FIN NAVBAR -->
+
+
+
+        <div class="clearfix"></div>
+
+        <img class="fondo" src="images/guia_Turismo.jpg" alt="alt"/>
+        <div>
+            <h2 class='heading'>Agencias locales en Costa Rica</h2>
+
+            <div class="cartas">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="images/monkeyTour.png" class="card-img-top" alt="alt"/>
+                    <div class="card-body">
+                        <h5 class="card-title">3 Monkies Tour</h5>
+                        <p class="card-text">Direccion frente al Aeropuerto Daniel Oduber en Solarium Logistic Center Oficina 24 D., Liberia, Guanacaste</p>
+                        <br>
+                        <a class="btn btn-primary" href="/nuevaReservacionAgenciaLocal"> Reservar </a>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/adrenalinaRafting.jpeg" class="card-img-topR" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Adrenalina Rafting</h5>
+                        <p class="card-text">Direccion 250 metros al sur del Supermercado Pali, frente a la Estacion de combustible, Turrialba</p>
+                        <br>
+                        <a class="btn btn-primary" href="/nuevaReservacionAgenciaLocal"> Reservar </a>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div><!-- comment -->
+
+
+                <div class="card" style="width: 18rem;">
+                    <img src="images/alovaTours.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Alova Tours</h5>
+                        <p class="card-text">Direccion Alova Tours Agencia de Viajes Receptiva, Puntarenas</p>
+                        <br>
+                        <a class="btn btn-primary" href="/nuevaReservacionAgenciaLocal"> Reservar </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</html>
+

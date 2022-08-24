@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><!DOCTYPE html>
+            <html xmlns:th="http://www.thymeleaf.org">
+
+                </head>
+                <header th:replace="plantilla/templates::header"></header>
+                <title>Reservar Actividad</title>
+                <h1 th:text="${titulo}"></h1> <!-- Titulo tabla -->
+                <link href="C:\Users\ala11\OneDrive\Escritorio\U shit\bootstrap-5.0.2-dist\css" media="all" rel="stylesheet">
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+                <button type="button" class="btn btn-outline-success"><a href="/nuevaReservacionRestaurantes" type="">Reservar</a></button>
+
+                <br>
+
+                <table class="table table-bordered"> <!-- Comienzo Tabla -->
+
+                    <thead class="table table-dark table-striped">
+                        <tr>
+                            <th scope="col" th:text="#{tabla.cliente}"></th>
+                            <th scope="col"th:text="#{tabla.local}"></th>
+                            <th scope="col" th:text="#{tabla.fecha}"></th>    <!-- Columnas -->
+                            <th scope="col" th:text="#{tabla.hora}"></th>
+                            <th scope="col" th:text="#{tabla.cant}"></th>
+                            <th scope="col" th:text="#{tabla.acciones}"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <th:block th:each="restaurante : ${RestaurantesReserva}"> <!-- Rellenado Tabla -->
+                        <tr> 
+                            <td th:text="${restaurante.getCliente_restaurantes}"></td> <!-- Nombres Actividades -->
+                            
+                            <td th:text="${restaurante.getRestaurantesr}"></td> <!-- Nombres Actividades -->
+
+                            <td th:text="${restaurante.getFecha_restaurantes}"></td> <!-- Fecha Reservacion Actividades -->
+
+                            <td th:text="${restaurante.getHora_restaurantes}"></td> <!-- Hora Reservacion Actividades -->
+
+                            <td th:text="${restaurante.getCantidad_personas_restaurantes}"></td> <!-- Cantidad Personas Reservacion Actividades -->
+                            <td>
+                                <a th:href="@{/editReservaRestaurante/{id}(id=${restaurante.getId})}" th:text="#{tabla.editar}"></a> <!-- Opcion Editar -->
+                                <a th:href="@{/cancelarReservacionRestaurante/{id}(id=${restaurante.getId})}" th:text="#{tabla.cancelar}"></a> <!-- Opcion Eliminar -->
+                            </td>
+                        </tr>
+                    </th:block>
+                    </tbody>
+                </table>
+                </body>
+                <footer th:replace="plantilla/templates::footer"></footer>
+            </html></div>
+    </body>
+</html>
+

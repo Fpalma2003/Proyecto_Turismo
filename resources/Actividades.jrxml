@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Actividades" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5192eabf-fbc7-4393-908b-3211575c9959">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="actividadesr" class="java.lang.String"/>
+	<field name="fecha_actividades" class="java.lang.String"/>
+	<field name="hora_actividades" class="java.lang.String"/>
+	<field name="cantidad_personas_actividades" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="167" y="10" width="220" height="30" uuid="479b1d60-9392-486b-b3fc-163ee3770dc7"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#35EB2F"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Reportes Actividades Reserva]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="20" height="20" uuid="16fbc5ac-5a7e-487f-89c9-431dd1297bd4"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#16FF05"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="12" width="131" height="30" uuid="ca9bede3-549d-4d2a-9fb8-14aa57532893"/>
+				<box>
+					<pen lineColor="#05FF16"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nombre actividad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="10" width="60" height="30" uuid="c5d90ca5-96da-4c0c-b832-6c2233192be7"/>
+				<box>
+					<pen lineColor="#05FF22"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="10" width="50" height="30" uuid="7cae75f8-6385-40af-9930-1166fc12e67a"/>
+				<box>
+					<pen lineColor="#09FF05"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Hora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="10" width="125" height="30" uuid="6063783b-aebc-4e45-b4fe-9c500550772d"/>
+				<box>
+					<pen lineColor="#05FF05"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Cantidad personas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="74" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="20" width="40" height="30" uuid="802faf63-5264-4a7d-8f31-237b6f5a4813">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="81719509-f68a-449f-95c0-3ff91d78e18c"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="20" width="113" height="30" uuid="8ee549c6-4fa1-488b-870a-5336b0f6a32c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a87ae1d2-d45c-4b77-901d-8cbfc018ad01"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{actividadesr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="10" width="143" height="30" uuid="f18b1f9e-827e-495c-942e-7ec7bca3615a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f772a379-e9e5-4bfe-be1b-27c19964e7cc"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_actividades}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="10" width="140" height="30" uuid="ab50d516-feab-4980-8d81-64cc1f3f3e85">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a1086b26-e0f4-4646-a306-a54927ffb27a"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hora_actividades}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="10" width="100" height="30" uuid="d29121a3-1dfe-46c6-9242-cdf714b73d6a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e47efe90-ba3c-46b4-a87f-4aeacdc565c9"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad_personas_actividades}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="56" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" uuid="76fcf477-79d7-486c-bec9-33095d8b4826"/>
+				<box>
+					<pen lineColor="#1EFF05"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="220" y="10" width="100" height="30" uuid="7edc3f16-2686-4c8d-83ad-f485bab00822"/>
+				<box>
+					<pen lineColor="#08FF3D"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="410" y="10" width="100" height="30" uuid="93b6e48e-e2c7-4e04-84e1-e73736f776d1"/>
+				<box>
+					<pen lineColor="#2BFF05"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

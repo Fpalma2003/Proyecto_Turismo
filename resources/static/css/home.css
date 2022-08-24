@@ -1,0 +1,75 @@
+.navbar{
+    font-family: Arial;
+    position: relative;
+    height: 100px;
+
+    width: 99vw;
+    margin-left: 0vw;
+    position: fixed;
+}
+
+.logo{
+    width:12vw;
+    height:7vw;
+    cursor:pointer;
+    margin: 1vw;
+    margin-top: -1vw;
+}
+
+.navbar ul li{
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+
+.navbar ul li a{
+    font-size: 106%;
+    text-decoration: none;
+    color: green;
+    margin:10px;
+}
+
+.title{
+    margin:50px;
+    text-align: center;
+    color: green;
+}
+
+.background{
+    width: 100vw;
+    height: 500px;
+    margin-right: -6vw;
+}
+
+#circle {
+    width: 20vw;
+    height: 20vw;
+    -webkit-border-radius: 25vw;
+    -moz-border-radius: 25vw;
+    border-radius: 25vw;
+    background: #0cbd32;
+    margin-right: 16vw;
+
+}
+
+.contenido1{
+    margin-left: 0vw;
+    display:flex;
+}
+
+.contenido2{
+    margin-left: 0vw;
+    display:flex;
+}
+
+.img-contenido{
+    margin-top: 3vw;
+    zoom: 80%;
+}
+
+.link-contenido{
+    text-decoration: inherit;
+    color: green;
+}
+
+

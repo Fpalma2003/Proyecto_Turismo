@@ -1,0 +1,32 @@
+
+
+.navbar{
+    font-family: Arial;
+    position: relative;
+    height: 100px;
+
+    width: 99vw;
+    margin-left: 0vw;
+    position: fixed;
+}
+
+.logo{
+    width:12vw;
+    height:7vw;
+    cursor:pointer;
+    margin: 1vw;
+    margin-top: -1vw;
+}
+
+.navbar ul li{
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+
+.navbar ul li a{
+    font-size: 106%;
+    text-decoration: none;
+    color: green;
+    margin:10px;
+}
